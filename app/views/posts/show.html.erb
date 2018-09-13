@@ -21,7 +21,7 @@
   <%= f.text_area :content %>
   <br>
   <%= f.label "User:" %>
-  <%= f.collection_check_boxes :user_id, User.all, :id, :username, include_blank: 'Select a user' %>
+  <%= f.collection_select :user_id, User.all, :id, :username, include_blank: 'Select a user' %>
   <br>
   <%= f.label "New User:" %>
   <%= f.fields_for :user, @post.comments.last.build_user do |user_fields| %>
